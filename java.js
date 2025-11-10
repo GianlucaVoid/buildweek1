@@ -97,3 +97,18 @@
         incorrect_answers: ["Python", "C", "Jakarta"],
       },
     ];
+
+let userScore = 0; //punteggio dell'utente
+let questionNumber = 2; // numero della domanda corrente
+const totalQuestions = questions.length; //numero di domande
+// console.log(totalQuestions);
+
+//prende la domanda e la mette sullo schermo
+function showQuestions() {
+  const currentQuestion = questions[questionNumber];
+  const questionElement = document.querySelector("#question");
+  
+  questionElement.textContent = currentQuestion.question;
+}
+
+console.log(showQuestions());
