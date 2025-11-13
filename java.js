@@ -110,10 +110,15 @@ function mostraDomanda() {
   // genera i bottoni delle risposte
   const answersContainer = document.querySelector("#answers");
   answersContainer.innerHTML = "";
+  }
+
+
 let userScore = 0; //punteggio dell'utente
 let questionNumber = 2; // numero della domanda corrente
 const totalQuestions = questions.length; //numero di domande
 // console.log(totalQuestions);
+
+
 
 //prende la domanda e la mette sullo schermo
 function showQuestions() {
