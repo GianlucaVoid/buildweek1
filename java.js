@@ -105,10 +105,50 @@ const totalQuestions = questions.length; //numero di domande
 
 //prende la domanda e la mette sullo schermo
 function showQuestions() {
-  const currentQuestion = questions[questionNumber];
+  const currentQuestion = questions[3];
   const questionElement = document.querySelector("#question");
   
-  questionElement.textContent = currentQuestion.question;
+  questionElement.textContent = currentQuestion;
 }
 
+
+
 console.log(showQuestions());
+
+
+
+
+
+
+
+
+//FUNZIONE PER SELEZIONARE I BUTTON E DARE L'EFFETTO SELEZIONE
+
+// const allButton = document.querySelectorAll('.btn-answers')
+
+// function clickAnswer(event){
+
+//     allButton.forEach(button =>{
+//         button.classList.remove('button-click')
+//     });
+
+// event.currentTarget.classList.add('button-click')
+// }
+
+// allButton.forEach(button=>{
+//     button.addEventListener('click', clickAnswer)
+// })
+
+//CICLO FOR PER ITERARE LE DOMANDE
+
+// let domande = []
+// let questionOnHtml= document.querySelector('#question')
+
+// for(let i = 0; i < questions.length; i++){
+//     let domande = questions[i].question
+
+//     domande = questions[ Math.floor(Math.random()* questions.length)]
+
+// questionOnHtml.innerText = domande.question
+//     console.log(domande)
+// }
