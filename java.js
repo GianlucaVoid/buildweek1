@@ -98,7 +98,7 @@
       },
     ];
 
-let domandaCorrente = 0;
+let domandaCorrente = 0; // per cambiare domanda e vederla sul browser
 let punteggio = 0;
 
 function mostraDomanda() {
