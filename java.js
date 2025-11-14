@@ -98,14 +98,31 @@ const questions = [
   },
 ];
 
+let domandaCorrente = 0; // per cambiare domanda e vederla sul browser
+let punteggio = 0;
+
+function mostraDomanda() {
+  // prendi la domanda corrente dall’array
+  const domanda = questions[domandaCorrente];
+  console.log(domanda);
+  // inserisci il testo nel DOM
+  document.querySelector("#question").innerHTML = domanda.question;
+  // genera i bottoni delle risposte
+  const answersContainer = document.querySelector("#answers");
+  answersContainer.innerHTML = "";
+}
+
+
 let userScore = 0; //punteggio dell'utente
 let questionNumber = 2; // numero della domanda corrente
 const totalQuestions = questions.length; //numero di domande
 // console.log(totalQuestions);
 
+
+
 //prende la domanda e la mette sullo schermo
 function showQuestions() {
-  const currentQuestion = questions[questionNumber];
+  const currentQuestion = questions[3];
   const questionElement = document.querySelector("#question");
 
   questionElement.textContent = currentQuestion.question;
