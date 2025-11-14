@@ -53,7 +53,7 @@ a {
     color: #000047;
 }
 
-footer {
+#footerBenvenuto {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +90,7 @@ input[type="checkbox"]:checked::after {
     max-width: 800px;
 }
 
-#risposte {
+#question {
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
@@ -98,7 +98,7 @@ input[type="checkbox"]:checked::after {
 
 }
 
-#risposteBtn {
+.btn {
     height: 50px;
     width: 200px;
     border: solid 1px;
@@ -109,9 +109,9 @@ input[type="checkbox"]:checked::after {
     margin: 20px 100px;
 }
 
-footer {
+#footerDomande {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 100px 0;
 }

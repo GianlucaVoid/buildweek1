@@ -100,67 +100,71 @@ const questions = [
 
 //FUNZIONE PER SELEZIONARE I BUTTON E DARE L'EFFETTO SELEZIONE
 
-const allButton = document.querySelectorAll('.btn-answers')
+//const allButton = document.querySelectorAll('.btn')
+//
+//function clickAnswer(event) {
+//
+//  allButton.forEach(button => {
+//    button.classList.remove('button-click')
+//  });
+//
+//  event.currentTarget.classList.add('button-click')
+//}
+//
+//allButton.forEach(button => {
+//  button.addEventListener('click', clickAnswer)
+//})
 
-function clickAnswer(event) {
-
-  allButton.forEach(button => {
-    button.classList.remove('button-click')
-  });
-
-  event.currentTarget.classList.add('button-click')
-}
-
-allButton.forEach(button => {
-  button.addEventListener('click', clickAnswer)
-})
 
 //CICLO FOR PER ITERARE LE DOMANDE
 
-let domande = []
-let questionOnHtml = document.querySelector('#question')
+// let domande = []
+// let questionOnHtml = document.querySelector('#question')
 
-for (let i = 0; i < questions.length; i++) {
-  let domande = questions[i].question
+// for (let i = 0; i < questions.length; i++) {
+  // let domande = questions[i].question
 
-  domande = questions[Math.floor(Math.random() * questions.length)]
+  // domande = questions[Math.floor(Math.random() * questions.length)]
 
-  questionOnHtml.innerText = domande.question
-  console.log(domande)
-}
+  // questionOnHtml.innerText = domande.question
+  // console.log(domande)
+// }
 
 
-let domandaCorrente = 0; // per cambiare domanda e vederla sul browser
+//let domandaCorrente = questions.question; // per cambiare domanda e vederla sul browser
+let numeroDomanda = 0;
 let punteggio = 0;
 
-function mostraDomanda() {
+function mostraDomanda(domandaCorrente) {
   // prendi la domanda corrente dall’array
   const domanda = questions[domandaCorrente];
-  console.log(domanda);
+  console.log (domanda)
   // inserisci il testo nel DOM
   document.querySelector("#question").innerHTML = domanda.question;
   // genera i bottoni delle risposte
-  const answersContainer = document.querySelector("#answers");
-  answersContainer.innerHTML = "";
+  const answersContainer = document.querySelector("#answer");
+
+  let rispostesbagliate = domanda.incorrect_answers;
+  rispostesbagliate.push(domanda.correct_answer)
+  console.log (rispostesbagliate)
+
+  let tuttiBottoni = document.getElementsByClassName ('btn')
+
+  for (let i = 0; i < tuttiBottoni.length; i++ ) {
+    tuttiBottoni[i].innerText = rispostesbagliate [i]
+
+  }
+
+
+
+
+
+
 }
-
-
-let userScore = 0; //punteggio dell'utente
-let questionNumber = 2; // numero della domanda corrente
-const totalQuestions = questions.length; //numero di domande
-// console.log(totalQuestions);
+mostraDomanda(numeroDomanda)
 
 
 
-//prende la domanda e la mette sullo schermo
-function showQuestions() {
-  const currentQuestion = questions[3];
-  const questionElement = document.querySelector("#question");
-
-  questionElement.textContent = currentQuestion.question;
-}
-
-console.log(showQuestions());
 
 
 
